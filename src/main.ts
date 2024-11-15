@@ -10,12 +10,13 @@ async function bootstrap() {
   app.useGlobalPipes(new ValidationPipe({
     whitelist: true,
     forbidNonWhitelisted: true,
-    transform: true,//transform dtos as query
+    transform: true,//transform dtos like @Query 
     transformOptions: {
       enableImplicitConversion: true
     }
   }))
 
-  await app.listen(3000);
+  await app.listen(process.env.PORT);
+  console.log(`App running on port ${process.env.PORT}`)
 }
 bootstrap();
