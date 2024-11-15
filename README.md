@@ -23,7 +23,17 @@ npm i -g @nestjs/cli
 docker-compose up -d
 ```
 
-5. Reconstruir la base de datos
+5. Clonar el archivo **.env.template** y renombrar a **.env**
+
+6. Llenar las varaibles de entorno en el **.env**
+
+7. Ejecutar la aplicacion en dev:
+
+```
+npm run start:dev
+```
+
+8. Reconstruir la base de datos
 
 ```
 http://localhost:3000/api/v2/seed
@@ -34,3 +44,5 @@ http://localhost:3000/api/v2/seed
 - MongoDb
 - Nest
 - mongoose
+
+https://gist.github.com/Klerith/e7861738c93712840ab3a38674843490#file-docker-compose-prod-yaml-L10
